@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/StyleSheet.css}"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<!-- Side navigation -->
+<div class="sidenav">
+    <a href="index.html">About</a>
+    <a href="guessNumber.html">Game - Guess the number</a>
+    <a href="afterNDays.html">After N Days</a>
+    <a href="palindromeNumber.html">Palindrome number</a>
+    <a href="LeapYear.html">Leap Year</a>
+    <a href="chineseZodiac.html">Chinese Zodiac</a>
+    <a href="guessBirthday.html">Guess Birthday</a>
+</div>
+
+<!-- Page content -->
+<div class="main">
+
+    <p class="number_block" th:text="${guessBirthdaySets}"></p>
+    <p class="number_block" th:text="${guessBirthdaySets2}"></p>
+    <p class="number_block" th:text="${guessBirthdaySets3}"></p>
+    <p class="number_block" th:text="${guessBirthdaySets4}"></p>
+    <p class="number_block" th:text="${guessBirthdaySets5}"></p>
+    <form action="guessBirthday.html" method="post">
+        <input type="radio" id="yes" name="set1Result" value="1">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="set1Result" value="0">
+        <label for="no" class="nos">No</label>
+
+        <input type="radio" id="yes2" name="set2Result" value="1">
+        <label for="yes2">Yes</label>
+        <input type="radio" id="no2" name="set2Result" value="0">
+        <label for="no2" class="nos">No</label>
+
+        <input type="radio" id="yes3" name="set3Result" value="1">
+        <label for="yes3">Yes</label>
+        <input type="radio" id="no3" name="set3Result" value="0">
+        <label for="no3" class="nos">No</label>
+
+        <input type="radio" id="yes4" name="set4Result" value="1">
+        <label for="yes4">Yes</label>
+        <input type="radio" id="no4" name="set4Result" value="0">
+        <label for="no4" class="nos">No</label>
+
+        <input type="radio" id="yes5" name="set5Result" value="1">
+        <label for="yes5">Yes</label>
+        <input type="radio" id="no5" name="set5Result" value="0">
+        <label for="no5" class="nos">No</label>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3 th:text="${guessBirthdayResult}"></h3>
+
+</div>
+
+
+</body>
+</html>

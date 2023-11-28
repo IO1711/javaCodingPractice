@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/StyleSheet.css}"/>
+    <meta charset="UTF-8">
+    <title>Game-Guess the number</title>
+
+</head>
+<body>
+<!-- Side navigation -->
+<div class="sidenav">
+    <a href="index.html">About</a>
+    <a href="guessNumber.html">Game - Guess the number</a>
+    <a href="afterNDays.html">After N Days</a>
+    <a href="palindromeNumber.html">Palindrome number</a>
+    <a href="LeapYear.html">Leap Year</a>
+    <a href="chineseZodiac.html">Chinese Zodiac</a>
+    <a href="guessBirthday.html">Guess Birthday</a>
+</div>
+
+<!-- Page content -->
+<div class="main">
+    <h1>..:::Let's guess:::..</h1>
+    <p>I thought of a random number, you can guess 3 numbers from 1 to 20.</p>
+    <form action="guessNumber.html" method="post">
+    <input type="text" name="firstGuess"/>
+    <input type="text" name="secondGuess"/>
+    <input type="text" name="thirdGuess"/>
+    <button onclick="showResult()" type="submit">Submit</button>
+    </form>
+
+
+
+    <div id="result">
+        <h2 th:text="${message}">message</h2>
+    </div>
+
+
+    <table>
+        <caption>Guess history (last 5 tries only)</caption>
+        <tr>
+            <td>ID</td>
+            <td>First guess</td>
+            <td>Second guess</td>
+            <td>Third guess</td>
+            <td>Random number</td>
+        </tr>
+        <tr>
+            <td th:text="${guessId1}"></td>
+            <td th:text="${firstGuess1}"></td>
+            <td th:text="${secondGuess1}"></td>
+            <td th:text="${thirdGuess1}"></td>
+            <td th:text="${randomNumber1}"></td>
+        </tr>
+        <tr>
+            <td th:text="${guessId2}"></td>
+            <td th:text="${firstGuess2}"></td>
+            <td th:text="${secondGuess2}"></td>
+            <td th:text="${thirdGuess2}"></td>
+            <td th:text="${randomNumber2}"></td>
+        </tr>
+        <tr>
+            <td th:text="${guessId3}"></td>
+            <td th:text="${firstGuess3}"></td>
+            <td th:text="${secondGuess3}"></td>
+            <td th:text="${thirdGuess3}"></td>
+            <td th:text="${randomNumber3}"></td>
+        </tr>
+        <tr>
+            <td th:text="${guessId4}"></td>
+            <td th:text="${firstGuess4}"></td>
+            <td th:text="${secondGuess4}"></td>
+            <td th:text="${thirdGuess4}"></td>
+            <td th:text="${randomNumber4}"></td>
+        </tr>
+        <tr>
+            <td th:text="${guessId5}"></td>
+            <td th:text="${firstGuess5}"></td>
+            <td th:text="${secondGuess5}"></td>
+            <td th:text="${thirdGuess5}"></td>
+            <td th:text="${randomNumber5}"></td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+</body>
+</html>

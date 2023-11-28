@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/StyleSheet.css}"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<!-- Side navigation -->
+<div class="sidenav">
+    <a href="index.html">About</a>
+    <a href="guessNumber.html">Game - Guess the number</a>
+    <a href="afterNDays.html">After N Days</a>
+    <a href="palindromeNumber.html">Palindrome number</a>
+    <a href="LeapYear.html">Leap Year</a>
+    <a href="chineseZodiac.html">Chinese Zodiac</a>
+    <a href="guessBirthday.html">Guess Birthday</a>
+</div>
+
+<!-- Page content -->
+<div class="main">
+    <h1>Chinese Zodiac</h1>
+    <form action="chineseZodiac.html" method="post">
+    <br/><label for="zodiacYear">Enter the year:</label>
+    <br/><input type="number" name="zodiacYear"/>
+    <button type="submit">Check</button>
+    <h3 th:text="${zodiacMessage}"></h3>
+    </form>
+
+</div>
+
+
+</body>
+</html>

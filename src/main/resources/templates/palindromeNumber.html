@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/StyleSheet.css}"/>
+    <meta charset="UTF-8">
+    <title>Palindrome number</title>
+
+</head>
+<body>
+<!-- Side navigation -->
+<div class="sidenav">
+    <a href="index.html">About</a>
+    <a href="guessNumber.html">Game - Guess the number</a>
+    <a href="afterNDays.html">After N Days</a>
+    <a href="palindromeNumber.html">Palindrome number</a>
+    <a href="LeapYear.html">Leap Year</a>
+    <a href="chineseZodiac.html">Chinese Zodiac</a>
+    <a href="guessBirthday.html">Guess Birthday</a>
+</div>
+
+<!-- Page content -->
+<div class="main">
+    <h1>Palindrome number</h1>
+    <p>A palindromic number (also known as a numeral palindrome or a numeric palindrome) is a number (such as 16461) that remains the same when its digits are reversed. In other words, it has reflectional symmetry across a vertical axis.</p>
+    <br/><p>Enter a number to find out whether it is a palindrome number or not.</p>
+    <form action="palindromeNumber.html" method="post">
+    <br/><input type="number" name="checkNumber"/>
+    <button type="submit">Check</button>
+    </form>
+    <br/>
+    <h3 th:text="${isPalindrome}"></h3>
+
+    <br/><p>Here you can see all the palindrome numbers until the number you enter.</p>
+    <form action="palindromeNumber.html" method="post">
+        <br/><input type="number" name="checkNumberSet"/>
+        <button type="submit">Check</button>
+    </form>
+    <br/>
+    <h3 th:text="${allPalindrome}"></h3>
+</div>
+
+
+</body>
+</html>

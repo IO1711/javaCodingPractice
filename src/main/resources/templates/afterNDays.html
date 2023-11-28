@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/StyleSheet.css}"/>
+    <meta charset="UTF-8">
+    <title>After N days</title>
+
+</head>
+<body>
+<!-- Side navigation -->
+<div class="sidenav">
+    <a href="index.html">About</a>
+    <a href="guessNumber.html">Game - Guess the number</a>
+    <a href="afterNDays.html">After N Days</a>
+    <a href="palindromeNumber.html">Palindrome number</a>
+    <a href="LeapYear.html">Leap Year</a>
+    <a href="chineseZodiac.html">Chinese Zodiac</a>
+    <a href="guessBirthday.html">Guess Birthday</a>
+</div>
+
+<!-- Page content -->
+<div class="main">
+    <h1>Weekday After N Days</h1>
+    <form action="afterNDays.html" method="post">
+    <p>Put any number here and find out what day of the week it will be after this number of days.</p>
+    <input type="number" name="nDays2" placeholder="F.e. 88"/>
+    <button type="submit">From today</button>
+    </form>
+
+    <div>
+       <h2 th:text="${we}"></h2>
+    </div>
+
+    <form action="afterNDays.html" method="post">
+        <p> Here you can decide the weekday to start</p>
+        <label>Week day</label><br/>
+        <input type="text" name="weekDay" placeholder="F.e. Friday"/><br/>
+        <label>Number of days</label><br/>
+        <input type="number" name="nDays" placeholder="F.e. 88"/><br/>
+        <button type="submit">From the user day</button>
+    </form>
+
+    <div>
+        <h2 th:text="${message1AfterNDays}">message1</h2>
+        <h2 th:text="${message2AfterNDays}">message2</h2>
+
+    </div>
+</div>
+
+
+</body>
+</html>
